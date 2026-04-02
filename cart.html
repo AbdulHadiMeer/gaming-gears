@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart | Ultra Play</title>
+
+<link rel="stylesheet" href="cart.css">
+<script src="cart.js" defer></script>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <h2>🛒 Your Cart</h2>
+  <a href="products.html" class="back">← Back to Products</a>
+</header>
+
+<!-- ===== CART ITEMS ===== -->
+<main class="cart-container">
+
+  <div id="cart-items"></div>
+
+  <!-- SUMMARY -->
+  <div class="cart-summary">
+    <h3>Order Summary</h3>
+    <p>Total Items: <span id="total-items">0</span></p>
+    <p>Total Price: <span id="total-price">Rs 0</span></p>
+
+    <button class="checkout-btn" onclick="checkout()">
+      Proceed to Checkout
+    </button>
+  </div>
+
+</main>
+
+</body>
+</html>

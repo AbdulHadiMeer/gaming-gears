@@ -1,0 +1,39 @@
+Red Black Signup Login Page
+· html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Page</title>
+  <link rel="stylesheet" href="signin.css">
+  <script src="signin.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+  
+  <div id="authBox">
+    <h2 id="title">Sign Up</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="handleAuth()" href="index.html">Submit</button>
+    <div class="toggle" onclick="toggleMode()">Already have an account? Login</div>
+  </div>
+
+
+  <div class="logout" id="logoutBox">
+    <h2>Welcome!</h2>
+    <p class="welcome-text">You are logged in</p>
+    <button onclick="logout()">Sign Out</button>
+  </div>
+
+
+</div>
+
+
+
+</body>
+</html>

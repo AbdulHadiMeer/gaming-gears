@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Ultra Play</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="products.css">
+<script src="index.js" defer></script>
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <div class="logo">⚡ Ultra Play</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" >Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="admin-btn" onclick="openAdminLogin()">Admin</button>
+
+<a href="signin.html"><button class="admin-btn" >Sign up</button></a>
+
+
+
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+  </nav>
+</header>
+<!-- CONTACT SECTION -->
+<section class="contact-hero">
+  <div class="contact-content">
+    <h1>Contact Us</h1>
+    <p>Have questions or need help? Reach out to us!</p>
+
+<form onsubmit="sendWhatsApp(event)">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+    <div class="contact-info">
+      <p>📧 Email: abdulhadimeer@gmail.com</p>
+      <p>📞 Phone: +92 3702472637</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="admin-login-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAdminLogin()">&times;</span>
+    <h2>Admin Login</h2>
+    <input type="password" id="admin-password" placeholder="Enter Password">
+    <button onclick="checkAdminPassword()">Login</button>
+    <p id="login-error" style="color:red;"></p>
+  </div>
+</div>
+
+<!-- ADMIN PANEL MODAL -->
+<div id="admin-panel-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAdminPanel()">&times;</span>
+    <h2>Admin Panel</h2>
+
+    <input type="text" id="product-name" placeholder="Product Name">
+    <input type="text" id="product-price" placeholder="Price">
+    <input type="text" id="product-img" placeholder="Image URL">
+    <input type="text" id="product-detail" placeholder="Detail">
+
+    <button onclick="addProduct()">Add Product</button>
+
+    <h3>Manage Products</h3>
+    <div id="admin-products-list"></div>
+  </div>
+</div>
+
+</body>
+</html>
